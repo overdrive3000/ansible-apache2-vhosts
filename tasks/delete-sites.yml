@@ -1,11 +1,4 @@
 ---
-- name: Delete user
-  user:
-    name: "{{ item['user'] }}"
-    state: absent
-    remove: yes
-  with_items: deleted_vhost_sites
-
 - name: Delete public_html folders
   file:
     path: "{{ vhost_base_path }}/{{ item['host'] }}"
