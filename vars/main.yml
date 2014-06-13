@@ -69,8 +69,6 @@ vhost_logs_path: "/var/log/apache2"
 deleted_vhost_sites:
   - {
       host: 'del.example.com',
-      user: 'delexample',
-      group: 'delexample',
       admin_email: 'admin@del.example.com',
       disabled: True
     }
@@ -78,8 +76,6 @@ deleted_vhost_sites:
 disabled_vhost_sites: &disabled
   - {
       host: 'dev.example.com',
-      user: 'devexample',
-      group: 'devexample',
       admin_email: 'admin@dev.example.com',
       disabled: True
     }
@@ -88,8 +84,6 @@ vhost_sites:
   - *disabled
   - {
       host: 'example.com',
-      user: 'example',
-      group: 'example',
       admin_email: 'admin@example.com',
       ssl: {
         enabled: False,
