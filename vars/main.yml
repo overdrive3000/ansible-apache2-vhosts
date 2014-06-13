@@ -3,7 +3,6 @@ apache_packages:
   - apache2
   - apache2-doc
   - apache2-utils
-  - apache2-mpm-itk
   - libapache2-mod-php5
 
 apache_modules:
@@ -64,7 +63,8 @@ php_timezone: "Australia/Brisbane"
 memory_limit: "32M"
 html_errors: "Off"
 
-vhost_base_path: "/srv/www"
+vhost_base_path: "/var/www"
+vhost_logs_path: "/var/log/apache2"
 
 deleted_vhost_sites:
   - {
