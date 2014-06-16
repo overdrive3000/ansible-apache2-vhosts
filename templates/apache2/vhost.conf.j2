@@ -5,10 +5,13 @@
     ServerAlias                           {{ alias }}
 {% endfor %}
 
-    DocumentRoot                 {{ vhost_base_path }}/{{ item['host'] }}/
-    ErrorLog                     {{ vhost_logs_path }}/{{ item['host'] }}-error.log
-    CustomLog                    {{ vhost_base_path }}/{{ item['host'] }}-access.log combined
-    php_admin_value error_log    {{ vhost_base_path }}/{{ item['host'] }}-php.error.log
+    DocumentRoot                {{ vhost_base_path }}/{{ item['host'] }}/
+
+    # Log configurations
+    LogLevel                    {{ apache_log_level }}
+    ErrorLog                    {{ vhost_logs_path }}/{{ item['host'] }}-error.log
+    CustomLog                   {{ vhost_logs_path }}/{{ item['host'] }}-access.log combined
+    php_admin_value error_log   {{ vhost_logs_path }}/{{ item['host'] }}-php.error.log
 
     <IfModule mod_expires.c>
         ExpiresActive On

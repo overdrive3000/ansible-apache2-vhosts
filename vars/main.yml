@@ -42,6 +42,7 @@ apache_modules:
 apache_host: "127.0.0.1"
 apache_port: "80"
 apache_ssl_port: "443"
+apache_log_level: "warn"
 
 
 php_packages:
